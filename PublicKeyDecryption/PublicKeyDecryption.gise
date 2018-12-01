@@ -97,6 +97,10 @@
     <transform xil_pn:end_ts="1543480618" xil_pn:in_ck="-5989739955311334505" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1543480618">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Decryptor.v"/>
       <outfile xil_pn:name="GCD.v"/>
       <outfile xil_pn:name="GCD_tb.v"/>
@@ -120,6 +124,11 @@
     <transform xil_pn:end_ts="1543480618" xil_pn:in_ck="-5989739955311334505" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1543480618">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Decryptor.v"/>
       <outfile xil_pn:name="GCD.v"/>
       <outfile xil_pn:name="GCD_tb.v"/>
@@ -131,7 +140,10 @@
     <transform xil_pn:end_ts="1543480622" xil_pn:in_ck="-5989739955311334505" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="8165537843544393491" xil_pn:start_ts="1543480618">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="GCD_tb_beh.prj"/>
       <outfile xil_pn:name="GCD_tb_isim_beh.exe"/>
@@ -143,6 +155,9 @@
     <transform xil_pn:end_ts="1543480622" xil_pn:in_ck="7455538252327026205" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="6157758950712648502" xil_pn:start_ts="1543480622">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="GCD_tb_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
