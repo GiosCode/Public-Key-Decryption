@@ -2,9 +2,9 @@ Command line:
    RNG_tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  36157
+     -socket  35645
 
-Tue Nov 27 22:01:35 2018
+Thu Nov 29 08:02:34 2018
 
 
  Elaboration Time: 0.06 sec
@@ -20,9 +20,9 @@ Tue Nov 27 22:01:35 2018
  Total Traceable Variables  : 20
  Total Scalar Nets and Variables : 119
 
- Total Simulation Time: 0.07 sec
+ Total Simulation Time: 0.06 sec
 
  Current Memory Usage: 276.173 Meg
 
-Tue Nov 27 22:01:53 2018
+Thu Nov 29 08:02:46 2018
 

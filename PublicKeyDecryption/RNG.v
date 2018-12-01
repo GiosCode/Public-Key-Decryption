@@ -10,7 +10,8 @@
 // Target Devices: 
 // Tool versions: 
 // Description: 
-//
+// 
+// Outputs 1 random number every clock cycle
 // Dependencies: 
 //
 // Revision: 
@@ -21,9 +22,7 @@
 module RNG(input clk,
 			output wire[11:0]rand);
 			
-reg [11:0]data = 12'b101101001000;
-//wire [11:0]
-//data = seed;
+reg [11:0]data = 12'b101101001000;//Initial seed
 always @(posedge clk) begin
 	data <= {data[11:0], data[0]^data[3]^data[5]^data[11]};
 end
