@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.02 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.02 secs
  
 --> 
 Reading design: GCD.prj
@@ -108,7 +108,7 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/GCD.v" into library work
+Analyzing Verilog file "/home/ise/XIlinxShare/Public-Key Decryption/PublicKeyDecryption/GCD.v" into library work
 Parsing module <GCD>.
 
 =========================================================================
@@ -122,14 +122,16 @@ Elaborating module <GCD>.
 =========================================================================
 
 Synthesizing Unit <GCD>.
-    Related source file is "/home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/GCD.v".
+    Related source file is "/home/ise/XIlinxShare/Public-Key Decryption/PublicKeyDecryption/GCD.v".
         checkLoop = 2'b00
         second = 2'b01
         finished = 2'b10
         setup = 2'b11
+    Found 8-bit register for signal <tmp2>.
     Found 2-bit register for signal <state>.
     Found 8-bit register for signal <c>.
-    Found 8-bit register for signal <tmp2>.
+    Found 8-bit register for signal <r>.
+    Found 8-bit register for signal <tmp>.
     Found finite state machine <FSM_0> for signal <state>.
     -----------------------------------------------------------------------
     | States             | 4                                              |
@@ -142,8 +144,8 @@ Synthesizing Unit <GCD>.
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
     Summary:
-	inferred  16 D-type flip-flop(s).
-	inferred   1 Multiplexer(s).
+	inferred  32 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
 Unit <GCD> synthesized.
 
@@ -196,8 +198,8 @@ Macro Statistics
  16-bit adder                                          : 2
  8-bit adder                                           : 2
  9-bit adder                                           : 2
-# Registers                                            : 2
- 8-bit register                                        : 2
+# Registers                                            : 4
+ 8-bit register                                        : 4
 # Comparators                                          : 9
  10-bit comparator lessequal                           : 1
  11-bit comparator lessequal                           : 1
@@ -208,9 +210,9 @@ Macro Statistics
  16-bit comparator lessequal                           : 1
  8-bit comparator lessequal                            : 1
  9-bit comparator lessequal                            : 1
-# Multiplexers                                         : 59
+# Multiplexers                                         : 60
  1-bit 2-to-1 multiplexer                              : 56
- 8-bit 2-to-1 multiplexer                              : 3
+ 8-bit 2-to-1 multiplexer                              : 4
 # FSMs                                                 : 1
 
 =========================================================================
@@ -226,8 +228,8 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # Adders/Subtractors                                   : 9
  8-bit adder carry in                                  : 9
-# Registers                                            : 16
- Flip-Flops                                            : 16
+# Registers                                            : 32
+ Flip-Flops                                            : 32
 # Comparators                                          : 9
  10-bit comparator lessequal                           : 1
  11-bit comparator lessequal                           : 1
@@ -238,9 +240,9 @@ Macro Statistics
  16-bit comparator lessequal                           : 1
  8-bit comparator lessequal                            : 1
  9-bit comparator lessequal                            : 1
-# Multiplexers                                         : 59
+# Multiplexers                                         : 60
  1-bit 2-to-1 multiplexer                              : 56
- 8-bit 2-to-1 multiplexer                              : 3
+ 8-bit 2-to-1 multiplexer                              : 4
 # FSMs                                                 : 1
 
 =========================================================================
@@ -266,6 +268,16 @@ Optimizing unit <mod_8u_8u> ...
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block GCD, actual ratio is 2.
+FlipFlop tmp2_0 has been replicated 2 time(s)
+FlipFlop tmp2_1 has been replicated 2 time(s)
+FlipFlop tmp2_2 has been replicated 3 time(s)
+FlipFlop tmp2_3 has been replicated 2 time(s)
+FlipFlop tmp2_4 has been replicated 2 time(s)
+FlipFlop tmp2_5 has been replicated 2 time(s)
+FlipFlop tmp2_6 has been replicated 2 time(s)
+FlipFlop tmp2_7 has been replicated 2 time(s)
+FlipFlop tmp_5 has been replicated 1 time(s)
+FlipFlop tmp_6 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -273,8 +285,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 18
- Flip-Flops                                            : 18
+# Registers                                            : 53
+ Flip-Flops                                            : 53
 
 =========================================================================
 
@@ -297,20 +309,20 @@ Top Level Output File Name         : GCD.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 136
-#      INV                         : 2
-#      LUT2                        : 13
-#      LUT3                        : 20
-#      LUT4                        : 8
-#      LUT5                        : 18
-#      LUT6                        : 34
+# BELS                             : 264
+#      INV                         : 1
+#      LUT2                        : 5
+#      LUT3                        : 30
+#      LUT4                        : 12
+#      LUT5                        : 66
+#      LUT6                        : 102
 #      MUXCY                       : 18
-#      MUXF7                       : 1
+#      MUXF7                       : 8
 #      VCC                         : 1
 #      XORCY                       : 21
-# FlipFlops/Latches                : 18
+# FlipFlops/Latches                : 53
 #      FD                          : 2
-#      FDE                         : 16
+#      FDE                         : 51
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 24
@@ -324,16 +336,16 @@ Selected Device : 6slx9tqg144-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              18  out of  11440     0%  
- Number of Slice LUTs:                   95  out of   5720     1%  
-    Number used as Logic:                95  out of   5720     1%  
+ Number of Slice Registers:              53  out of  11440     0%  
+ Number of Slice LUTs:                  216  out of   5720     3%  
+    Number used as Logic:               216  out of   5720     3%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     95
-   Number with an unused Flip Flop:      77  out of     95    81%  
-   Number with an unused LUT:             0  out of     95     0%  
-   Number of fully used LUT-FF pairs:    18  out of     95    18%  
-   Number of unique control sets:         3
+ Number of LUT Flip Flop pairs used:    240
+   Number with an unused Flip Flop:     187  out of    240    77%  
+   Number with an unused LUT:            24  out of    240    10%  
+   Number of fully used LUT-FF pairs:    29  out of    240    12%  
+   Number of unique control sets:         4
 
 IO Utilization: 
  Number of IOs:                          25
@@ -363,7 +375,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 18    |
+clk                                | BUFGP                  | 53    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -374,9 +386,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 2.659ns (Maximum Frequency: 376.102MHz)
-   Minimum input arrival time before clock: 27.992ns
-   Maximum output required time after clock: 3.634ns
+   Minimum period: 15.741ns (Maximum Frequency: 63.530MHz)
+   Minimum input arrival time before clock: 2.109ns
+   Maximum output required time after clock: 3.597ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -385,74 +397,65 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 2.659ns (frequency: 376.102MHz)
-  Total number of paths / destination ports: 60 / 34
+  Clock period: 15.741ns (frequency: 63.530MHz)
+  Total number of paths / destination ports: 35347796 / 104
 -------------------------------------------------------------------------
-Delay:               2.659ns (Levels of Logic = 1)
-  Source:            state_FSM_FFd2 (FF)
-  Destination:       c_0 (FF)
+Delay:               15.741ns (Levels of Logic = 15)
+  Source:            tmp2_5_1 (FF)
+  Destination:       r_7 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: state_FSM_FFd2 to c_0
+  Data Path: tmp2_5_1 to r_7
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              11   0.447   0.882  state_FSM_FFd2 (state_FSM_FFd2)
-     INV:I->O              8   0.206   0.802  _n0021<1>1_cepot_INV_0 (_n0021<1>1_cepot)
-     FDE:CE                    0.322          c_0
+     FDE:C->Q              2   0.447   0.981  tmp2_5_1 (tmp2_5_1)
+     LUT6:I0->O            7   0.203   0.878  tmp[7]_tmp2[7]_mod_3/BUS_0003_INV_34_o1_SW1 (N93)
+     LUT6:I4->O            6   0.203   0.973  tmp[7]_tmp2[7]_mod_3/BUS_0003_INV_34_o1 (tmp[7]_tmp2[7]_mod_3/BUS_0003_INV_34_o)
+     LUT6:I3->O           13   0.205   0.933  tmp[7]_tmp2[7]_mod_3/BUS_0004_INV_49_o1 (tmp[7]_tmp2[7]_mod_3/BUS_0004_INV_49_o)
+     LUT5:I4->O            5   0.205   0.715  tmp[7]_tmp2[7]_mod_3/BUS_0005_INV_63_o2 (tmp[7]_tmp2[7]_mod_3/BUS_0005_INV_63_o1)
+     LUT5:I4->O            2   0.205   0.721  tmp[7]_tmp2[7]_mod_3/Mmux_a[0]_GND_2_o_MUX_150_o1711 (tmp[7]_tmp2[7]_mod_3/a[7]_GND_2_o_MUX_143_o)
+     LUT6:I4->O           18   0.203   1.050  tmp[7]_tmp2[7]_mod_3/BUS_0006_INV_76_o11 (tmp[7]_tmp2[7]_mod_3/BUS_0006_INV_76_o)
+     LUT5:I4->O            6   0.205   0.973  tmp[7]_tmp2[7]_mod_3/BUS_0007_INV_88_o24_SW2 (N50)
+     LUT6:I3->O           11   0.205   0.883  tmp[7]_tmp2[7]_mod_3/BUS_0007_INV_88_o24 (tmp[7]_tmp2[7]_mod_3/BUS_0007_INV_88_o)
+     LUT6:I5->O            2   0.205   0.864  tmp[7]_tmp2[7]_mod_3/BUS_0008_INV_99_o2 (tmp[7]_tmp2[7]_mod_3/BUS_0008_INV_99_o1)
+     LUT5:I1->O           15   0.203   0.982  tmp[7]_tmp2[7]_mod_3/BUS_0008_INV_99_o1 (tmp[7]_tmp2[7]_mod_3/BUS_0008_INV_99_o2)
+     LUT6:I5->O           14   0.205   0.957  tmp[7]_tmp2[7]_mod_3/Mmux_n032271 (tmp[7]_tmp2[7]_mod_3/n0322<6>)
+     MUXCY:DI->O           0   0.145   0.000  tmp[7]_tmp2[7]_mod_3/Madd_a[7]_b[7]_add_17_OUT[7:0]_Madd_cy<6> (tmp[7]_tmp2[7]_mod_3/Madd_a[7]_b[7]_add_17_OUT[7:0]_Madd_cy<6>)
+     XORCY:CI->O           2   0.180   0.617  tmp[7]_tmp2[7]_mod_3/Madd_a[7]_b[7]_add_17_OUT[7:0]_Madd_xor<7> (tmp[7]_tmp2[7]_mod_3/a[7]_b[7]_add_17_OUT[7:0]<7>)
+     LUT5:I4->O            1   0.205   0.684  tmp[7]_tmp2[7]_mod_3/BUS_0009_INV_109_o24_SW6 (N117)
+     LUT5:I3->O            1   0.203   0.000  tmp[7]_tmp2[7]_mod_3/Mmux_o81 (tmp[7]_tmp2[7]_mod_3_OUT<7>)
+     FDE:D                     0.102          r_7
     ----------------------------------------
-    Total                      2.659ns (0.975ns logic, 1.684ns route)
-                                       (36.7% logic, 63.3% route)
+    Total                     15.741ns (3.529ns logic, 12.212ns route)
+                                       (22.4% logic, 77.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 27440706 / 16
+  Total number of paths / destination ports: 35 / 35
 -------------------------------------------------------------------------
-Offset:              27.992ns (Levels of Logic = 25)
-  Source:            b<1> (PAD)
-  Destination:       tmp2_0 (FF)
+Offset:              2.109ns (Levels of Logic = 2)
+  Source:            a<0> (PAD)
+  Destination:       tmp_0 (FF)
   Destination Clock: clk rising
 
-  Data Path: b<1> to tmp2_0
+  Data Path: a<0> to tmp_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            19   1.222   1.436  b_1_IBUF (b_1_IBUF)
-     LUT6:I0->O            1   0.203   0.827  a[7]_b[7]_mod_3/BUS_0002_INV_18_o1 (a[7]_b[7]_mod_3/BUS_0002_INV_18_o1)
-     LUT6:I2->O            2   0.203   0.845  a[7]_b[7]_mod_3/Mmux_a[0]_GND_2_o_MUX_72_o171 (a[7]_b[7]_mod_3/a[7]_GND_2_o_MUX_65_o)
-     LUT6:I3->O            3   0.205   0.995  a[7]_b[7]_mod_3/BUS_0003_INV_34_o1 (a[7]_b[7]_mod_3/BUS_0003_INV_34_o)
-     LUT5:I0->O            1   0.203   0.580  a[7]_b[7]_mod_3/BUS_0004_INV_49_o1_SW0 (N8)
-     LUT6:I5->O            4   0.205   1.048  a[7]_b[7]_mod_3/BUS_0004_INV_49_o1 (a[7]_b[7]_mod_3/BUS_0004_INV_49_o)
-     LUT6:I0->O            2   0.203   0.981  a[7]_b[7]_mod_3/Mmux_a[0]_GND_2_o_MUX_126_o161 (a[7]_b[7]_mod_3/a[6]_GND_2_o_MUX_120_o)
-     LUT6:I0->O            2   0.203   0.721  a[7]_b[7]_mod_3/BUS_0005_INV_63_o2 (a[7]_b[7]_mod_3/BUS_0005_INV_63_o1)
-     LUT5:I3->O            4   0.203   1.048  a[7]_b[7]_mod_3/BUS_0005_INV_63_o11 (a[7]_b[7]_mod_3/BUS_0005_INV_63_o)
-     LUT6:I0->O            2   0.203   0.981  a[7]_b[7]_mod_3/Mmux_a[0]_GND_2_o_MUX_150_o151 (a[7]_b[7]_mod_3/a[5]_GND_2_o_MUX_145_o)
-     LUT6:I0->O            5   0.203   0.943  a[7]_b[7]_mod_3/BUS_0006_INV_76_o2 (a[7]_b[7]_mod_3/BUS_0006_INV_76_o1)
-     LUT6:I3->O           10   0.205   1.221  a[7]_b[7]_mod_3/BUS_0006_INV_76_o11 (a[7]_b[7]_mod_3/BUS_0006_INV_76_o)
-     LUT6:I0->O            4   0.203   1.048  a[7]_b[7]_mod_3/Mmux_a[0]_GND_2_o_MUX_172_o141 (a[7]_b[7]_mod_3/a[4]_GND_2_o_MUX_168_o)
-     LUT6:I0->O            1   0.203   0.684  a[7]_b[7]_mod_3/BUS_0007_INV_88_o1 (a[7]_b[7]_mod_3/BUS_0007_INV_88_o1)
-     LUT3:I1->O            1   0.203   0.580  a[7]_b[7]_mod_3/BUS_0007_INV_88_o24_SW0 (N15)
-     LUT6:I5->O           12   0.205   1.253  a[7]_b[7]_mod_3/BUS_0007_INV_88_o24 (a[7]_b[7]_mod_3/BUS_0007_INV_88_o)
-     LUT5:I0->O            2   0.203   0.981  a[7]_b[7]_mod_3/Mmux_a[0]_GND_2_o_MUX_192_o131 (a[7]_b[7]_mod_3/a[3]_GND_2_o_MUX_189_o)
-     LUT6:I0->O            2   0.203   0.981  a[7]_b[7]_mod_3/BUS_0008_INV_99_o2 (a[7]_b[7]_mod_3/BUS_0008_INV_99_o1)
-     LUT6:I0->O            1   0.203   0.000  a[7]_b[7]_mod_3/BUS_0008_INV_99_o1_G (N18)
-     MUXF7:I1->O          10   0.140   1.201  a[7]_b[7]_mod_3/BUS_0008_INV_99_o1 (a[7]_b[7]_mod_3/BUS_0008_INV_99_o2)
-     LUT6:I1->O            4   0.203   1.048  a[7]_b[7]_mod_3/Mmux_n032261 (a[7]_b[7]_mod_3/n0322<5>)
-     LUT6:I0->O            1   0.203   0.808  a[7]_b[7]_mod_3/BUS_0009_INV_109_o21 (a[7]_b[7]_mod_3/BUS_0009_INV_109_o2)
-     LUT5:I2->O            2   0.205   0.617  a[7]_b[7]_mod_3/BUS_0009_INV_109_o24 (a[7]_b[7]_mod_3/BUS_0009_INV_109_o23)
-     LUT6:I5->O            7   0.205   1.021  a[7]_b[7]_mod_3/BUS_0009_INV_109_o25 (a[7]_b[7]_mod_3/BUS_0009_INV_109_o)
-     LUT5:I1->O            1   0.203   0.000  Mmux_state[1]_b[7]_wide_mux_4_OUT71 (state[1]_b[7]_wide_mux_4_OUT<6>)
-     FDE:D                     0.102          tmp2_6
+     IBUF:I->O             1   1.222   0.580  a_0_IBUF (a_0_IBUF)
+     LUT3:I2->O            1   0.205   0.000  Mmux_state[1]_a[7]_wide_mux_4_OUT11 (state[1]_a[7]_wide_mux_4_OUT<0>)
+     FDE:D                     0.102          tmp_0
     ----------------------------------------
-    Total                     27.992ns (6.145ns logic, 21.847ns route)
-                                       (22.0% logic, 78.0% route)
+    Total                      2.109ns (1.529ns logic, 0.580ns route)
+                                       (72.5% logic, 27.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
   Total number of paths / destination ports: 8 / 8
 -------------------------------------------------------------------------
-Offset:              3.634ns (Levels of Logic = 1)
+Offset:              3.597ns (Levels of Logic = 1)
   Source:            c_7 (FF)
   Destination:       c<7> (PAD)
   Source Clock:      clk rising
@@ -461,11 +464,11 @@ Offset:              3.634ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              2   0.447   0.616  c_7 (c_7)
+     FDE:C->Q              1   0.447   0.579  c_7 (c_7)
      OBUF:I->O                 2.571          c_7_OBUF (c<7>)
     ----------------------------------------
-    Total                      3.634ns (3.018ns logic, 0.616ns route)
-                                       (83.0% logic, 17.0% route)
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
 
 =========================================================================
 
@@ -477,19 +480,19 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    2.659|         |         |         |
+clk            |   15.741|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 20.00 secs
-Total CPU time to Xst completion: 18.50 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.21 secs
  
 --> 
 
 
-Total memory usage is 482528 kilobytes
+Total memory usage is 482604 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

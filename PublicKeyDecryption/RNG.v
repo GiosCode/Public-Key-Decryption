@@ -17,7 +17,7 @@
 // Revision: 
 // Revision 0.01 - File Created
 // Additional Comments: 
-//
+//works
 //////////////////////////////////////////////////////////////////////////////////
 module RNG(input clk,
 			output wire[11:0]rand);
