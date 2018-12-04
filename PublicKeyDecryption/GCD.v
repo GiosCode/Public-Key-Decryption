@@ -20,45 +20,62 @@
 //////////////////////////////////////////////////////////////////////////////////
 module GCD(
 				input clk,
-				input [7:0]a,
-				input [7:0]b,
-				output reg [7:0]c
+				input [11:0]a,
+				input [11:0]b,
+				input flag,
+				output reg [11:0]gcd,
+				output reg complete
     );
-reg [7:0]tmp;
-reg [7:0]tmp2;
-reg [7:0]r;
+reg [11:0]tmpa = 0;
+reg [11:0]tmpb = 0;
 
+reg [11:0]rem;
+
+reg setup = 0;
 parameter checkLoop = 2'b00;
-parameter second = 2'b01;
-parameter finished = 2'b10;
-parameter setup = 2'b11;
-reg [1:0]state = setup;
-reg active = 1;
+parameter opOne = 2'b01;
+parameter opTwo = 2'b10;
+parameter finished = 2'b11;
+reg [1:0]state = checkLoop;
+
+reg done = 0;//Once this is set to one you found gcd
+
 	always@(posedge clk) begin
-	//if(active == 1) begin
-	case(state)
-	setup: begin
-		tmp <= a;
-		tmp2 <= b;
-		state <= checkLoop;
-	end
-	checkLoop:begin
-	if(tmp2 > 0) state <= second;
-	else state <= finished;
-	end
-	second: begin
-	r <= tmp%tmp2;
-	tmp <= tmp2;
-	tmp2 <= r;
-	state <= checkLoop;
-	end
-	
-	finished: begin
-	c <= tmp;
-	//active <= 0;
-	end
-	endcase
-	//end
+	if(setup == 0)begin
+	tmpa = a;
+	tmpb = b;
+	setup = 1;
+   end
+		if(flag == 1) begin
+		case(state)
+		checkLoop: begin
+			if(tmpa == 0) begin
+			gcd = tmpb;
+			state = finished;
+			end
+			else if(tmpb == 0) begin
+			gcd = tmpa;
+			state = finished;
+			end
+			else begin
+			state = opOne;
+			end
+		end
+		opOne: begin
+		rem = tmpa % tmpb;
+		state = opTwo;
+		end
+		opTwo: begin
+		tmpa = tmpb;
+		tmpb = rem;
+		state = checkLoop;
+		end
+		finished: begin
+		complete = 1;
+		end
+		default: complete = 0;
+		endcase
+		end
 	end
 	
 endmodule

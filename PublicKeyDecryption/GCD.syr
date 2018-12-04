@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.02 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.02 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Reading design: GCD.prj
@@ -108,7 +108,7 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/ise/XIlinxShare/Public-Key Decryption/PublicKeyDecryption/GCD.v" into library work
+Analyzing Verilog file "/home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/GCD.v" into library work
 Parsing module <GCD>.
 
 =========================================================================
@@ -122,97 +122,119 @@ Elaborating module <GCD>.
 =========================================================================
 
 Synthesizing Unit <GCD>.
-    Related source file is "/home/ise/XIlinxShare/Public-Key Decryption/PublicKeyDecryption/GCD.v".
+    Related source file is "/home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/GCD.v".
         checkLoop = 2'b00
-        second = 2'b01
-        finished = 2'b10
-        setup = 2'b11
-    Found 8-bit register for signal <tmp2>.
+        opOne = 2'b01
+        opTwo = 2'b10
+        finished = 2'b11
+    Found 12-bit register for signal <tmpb>.
+    Found 1-bit register for signal <setup>.
     Found 2-bit register for signal <state>.
-    Found 8-bit register for signal <c>.
-    Found 8-bit register for signal <r>.
-    Found 8-bit register for signal <tmp>.
+    Found 12-bit register for signal <rem>.
+    Found 12-bit register for signal <gcd>.
+    Found 12-bit register for signal <tmpa>.
     Found finite state machine <FSM_0> for signal <state>.
     -----------------------------------------------------------------------
     | States             | 4                                              |
-    | Transitions        | 5                                              |
-    | Inputs             | 1                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 3                                              |
     | Outputs            | 2                                              |
     | Clock              | clk (rising_edge)                              |
-    | Power Up State     | 11                                             |
+    | Power Up State     | 00                                             |
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
     Summary:
-	inferred  32 D-type flip-flop(s).
-	inferred   2 Multiplexer(s).
+	inferred  49 D-type flip-flop(s).
+	inferred   7 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
 Unit <GCD> synthesized.
 
-Synthesizing Unit <mod_8u_8u>.
+Synthesizing Unit <mod_12u_12u>.
     Related source file is "".
-    Found 16-bit adder for signal <n0292> created at line 0.
-    Found 16-bit adder for signal <GND_2_o_b[7]_add_1_OUT> created at line 0.
-    Found 15-bit adder for signal <n0296> created at line 0.
-    Found 15-bit adder for signal <GND_2_o_b[7]_add_3_OUT> created at line 0.
-    Found 14-bit adder for signal <n0300> created at line 0.
-    Found 14-bit adder for signal <GND_2_o_b[7]_add_5_OUT> created at line 0.
-    Found 13-bit adder for signal <n0304> created at line 0.
-    Found 13-bit adder for signal <GND_2_o_b[7]_add_7_OUT> created at line 0.
-    Found 12-bit adder for signal <n0308> created at line 0.
-    Found 12-bit adder for signal <GND_2_o_b[7]_add_9_OUT> created at line 0.
-    Found 11-bit adder for signal <n0312> created at line 0.
-    Found 11-bit adder for signal <GND_2_o_b[7]_add_11_OUT> created at line 0.
-    Found 10-bit adder for signal <n0316> created at line 0.
-    Found 10-bit adder for signal <GND_2_o_b[7]_add_13_OUT> created at line 0.
-    Found 9-bit adder for signal <n0320> created at line 0.
-    Found 9-bit adder for signal <GND_2_o_b[7]_add_15_OUT> created at line 0.
-    Found 8-bit adder for signal <n0324> created at line 0.
-    Found 8-bit adder for signal <a[7]_b[7]_add_17_OUT[7:0]> created at line 0.
-    Found 16-bit comparator lessequal for signal <BUS_0001> created at line 0
-    Found 15-bit comparator lessequal for signal <BUS_0002> created at line 0
-    Found 14-bit comparator lessequal for signal <BUS_0003> created at line 0
-    Found 13-bit comparator lessequal for signal <BUS_0004> created at line 0
-    Found 12-bit comparator lessequal for signal <BUS_0005> created at line 0
-    Found 11-bit comparator lessequal for signal <BUS_0006> created at line 0
-    Found 10-bit comparator lessequal for signal <BUS_0007> created at line 0
-    Found 9-bit comparator lessequal for signal <BUS_0008> created at line 0
-    Found 8-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 24-bit adder for signal <n0576> created at line 0.
+    Found 24-bit adder for signal <GND_2_o_b[11]_add_1_OUT> created at line 0.
+    Found 23-bit adder for signal <n0580> created at line 0.
+    Found 23-bit adder for signal <GND_2_o_b[11]_add_3_OUT> created at line 0.
+    Found 22-bit adder for signal <n0584> created at line 0.
+    Found 22-bit adder for signal <GND_2_o_b[11]_add_5_OUT> created at line 0.
+    Found 21-bit adder for signal <n0588> created at line 0.
+    Found 21-bit adder for signal <GND_2_o_b[11]_add_7_OUT> created at line 0.
+    Found 20-bit adder for signal <n0592> created at line 0.
+    Found 20-bit adder for signal <GND_2_o_b[11]_add_9_OUT> created at line 0.
+    Found 19-bit adder for signal <n0596> created at line 0.
+    Found 19-bit adder for signal <GND_2_o_b[11]_add_11_OUT> created at line 0.
+    Found 18-bit adder for signal <n0600> created at line 0.
+    Found 18-bit adder for signal <GND_2_o_b[11]_add_13_OUT> created at line 0.
+    Found 17-bit adder for signal <n0604> created at line 0.
+    Found 17-bit adder for signal <GND_2_o_b[11]_add_15_OUT> created at line 0.
+    Found 16-bit adder for signal <n0608> created at line 0.
+    Found 16-bit adder for signal <GND_2_o_b[11]_add_17_OUT> created at line 0.
+    Found 15-bit adder for signal <n0612> created at line 0.
+    Found 15-bit adder for signal <GND_2_o_b[11]_add_19_OUT> created at line 0.
+    Found 14-bit adder for signal <n0616> created at line 0.
+    Found 14-bit adder for signal <GND_2_o_b[11]_add_21_OUT> created at line 0.
+    Found 13-bit adder for signal <n0620> created at line 0.
+    Found 13-bit adder for signal <GND_2_o_b[11]_add_23_OUT> created at line 0.
+    Found 12-bit adder for signal <n0624> created at line 0.
+    Found 12-bit adder for signal <a[11]_b[11]_add_25_OUT[11:0]> created at line 0.
+    Found 24-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 23-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 22-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 20-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 19-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 18-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 17-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 15-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 12-bit comparator lessequal for signal <BUS_0013> created at line 0
     Summary:
-	inferred  18 Adder/Subtractor(s).
-	inferred   9 Comparator(s).
-	inferred  58 Multiplexer(s).
-Unit <mod_8u_8u> synthesized.
+	inferred  26 Adder/Subtractor(s).
+	inferred  13 Comparator(s).
+	inferred 134 Multiplexer(s).
+Unit <mod_12u_12u> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 18
- 10-bit adder                                          : 2
- 11-bit adder                                          : 2
+# Adders/Subtractors                                   : 26
  12-bit adder                                          : 2
  13-bit adder                                          : 2
  14-bit adder                                          : 2
  15-bit adder                                          : 2
  16-bit adder                                          : 2
- 8-bit adder                                           : 2
- 9-bit adder                                           : 2
-# Registers                                            : 4
- 8-bit register                                        : 4
-# Comparators                                          : 9
- 10-bit comparator lessequal                           : 1
- 11-bit comparator lessequal                           : 1
+ 17-bit adder                                          : 2
+ 18-bit adder                                          : 2
+ 19-bit adder                                          : 2
+ 20-bit adder                                          : 2
+ 21-bit adder                                          : 2
+ 22-bit adder                                          : 2
+ 23-bit adder                                          : 2
+ 24-bit adder                                          : 2
+# Registers                                            : 5
+ 1-bit register                                        : 1
+ 12-bit register                                       : 4
+# Comparators                                          : 13
  12-bit comparator lessequal                           : 1
  13-bit comparator lessequal                           : 1
  14-bit comparator lessequal                           : 1
  15-bit comparator lessequal                           : 1
  16-bit comparator lessequal                           : 1
- 8-bit comparator lessequal                            : 1
- 9-bit comparator lessequal                            : 1
-# Multiplexers                                         : 60
- 1-bit 2-to-1 multiplexer                              : 56
- 8-bit 2-to-1 multiplexer                              : 4
+ 17-bit comparator lessequal                           : 1
+ 18-bit comparator lessequal                           : 1
+ 19-bit comparator lessequal                           : 1
+ 20-bit comparator lessequal                           : 1
+ 21-bit comparator lessequal                           : 1
+ 22-bit comparator lessequal                           : 1
+ 23-bit comparator lessequal                           : 1
+ 24-bit comparator lessequal                           : 1
+# Multiplexers                                         : 141
+ 1-bit 2-to-1 multiplexer                              : 132
+ 12-bit 2-to-1 multiplexer                             : 9
 # FSMs                                                 : 1
 
 =========================================================================
@@ -226,23 +248,27 @@ Macro Statistics
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 9
- 8-bit adder carry in                                  : 9
-# Registers                                            : 32
- Flip-Flops                                            : 32
-# Comparators                                          : 9
- 10-bit comparator lessequal                           : 1
- 11-bit comparator lessequal                           : 1
+# Adders/Subtractors                                   : 13
+ 12-bit adder carry in                                 : 13
+# Registers                                            : 49
+ Flip-Flops                                            : 49
+# Comparators                                          : 13
  12-bit comparator lessequal                           : 1
  13-bit comparator lessequal                           : 1
  14-bit comparator lessequal                           : 1
  15-bit comparator lessequal                           : 1
  16-bit comparator lessequal                           : 1
- 8-bit comparator lessequal                            : 1
- 9-bit comparator lessequal                            : 1
-# Multiplexers                                         : 60
- 1-bit 2-to-1 multiplexer                              : 56
- 8-bit 2-to-1 multiplexer                              : 4
+ 17-bit comparator lessequal                           : 1
+ 18-bit comparator lessequal                           : 1
+ 19-bit comparator lessequal                           : 1
+ 20-bit comparator lessequal                           : 1
+ 21-bit comparator lessequal                           : 1
+ 22-bit comparator lessequal                           : 1
+ 23-bit comparator lessequal                           : 1
+ 24-bit comparator lessequal                           : 1
+# Multiplexers                                         : 141
+ 1-bit 2-to-1 multiplexer                              : 132
+ 12-bit 2-to-1 multiplexer                             : 9
 # FSMs                                                 : 1
 
 =========================================================================
@@ -251,33 +277,28 @@ Macro Statistics
 *                         Low Level Synthesis                           *
 =========================================================================
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <FSM_0> on signal <state[1:2]> with sequential encoding.
+Optimizing FSM <FSM_0> on signal <state[1:2]> with user encoding.
 -------------------
  State | Encoding
 -------------------
- 11    | 00
+ 00    | 00
  01    | 01
+ 11    | 11
  10    | 10
- 00    | 11
 -------------------
 
 Optimizing unit <GCD> ...
 
-Optimizing unit <mod_8u_8u> ...
+Optimizing unit <mod_12u_12u> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block GCD, actual ratio is 2.
-FlipFlop tmp2_0 has been replicated 2 time(s)
-FlipFlop tmp2_1 has been replicated 2 time(s)
-FlipFlop tmp2_2 has been replicated 3 time(s)
-FlipFlop tmp2_3 has been replicated 2 time(s)
-FlipFlop tmp2_4 has been replicated 2 time(s)
-FlipFlop tmp2_5 has been replicated 2 time(s)
-FlipFlop tmp2_6 has been replicated 2 time(s)
-FlipFlop tmp2_7 has been replicated 2 time(s)
-FlipFlop tmp_5 has been replicated 1 time(s)
-FlipFlop tmp_6 has been replicated 1 time(s)
+Found area constraint ratio of 100 (+ 5) on block GCD, actual ratio is 6.
+WARNING:Xst:1426 - The value init of the FF/Latch setup hinder the constant cleaning in the block GCD.
+   You should achieve better results by setting this init to 1.
+FlipFlop setup has been replicated 3 time(s)
+FlipFlop tmpb_0 has been replicated 2 time(s)
+FlipFlop tmpb_1 has been replicated 3 time(s)
 
 Final Macro Processing ...
 
@@ -285,8 +306,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 53
- Flip-Flops                                            : 53
+# Registers                                            : 59
+ Flip-Flops                                            : 59
 
 =========================================================================
 
@@ -309,25 +330,25 @@ Top Level Output File Name         : GCD.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 264
-#      INV                         : 1
-#      LUT2                        : 5
-#      LUT3                        : 30
-#      LUT4                        : 12
-#      LUT5                        : 66
-#      LUT6                        : 102
-#      MUXCY                       : 18
-#      MUXF7                       : 8
+# BELS                             : 573
+#      GND                         : 1
+#      LUT2                        : 2
+#      LUT3                        : 49
+#      LUT4                        : 59
+#      LUT5                        : 130
+#      LUT6                        : 167
+#      MUXCY                       : 89
+#      MUXF7                       : 12
 #      VCC                         : 1
-#      XORCY                       : 21
-# FlipFlops/Latches                : 53
-#      FD                          : 2
-#      FDE                         : 51
+#      XORCY                       : 63
+# FlipFlops/Latches                : 59
+#      FD                          : 35
+#      FDE                         : 24
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 24
-#      IBUF                        : 16
-#      OBUF                        : 8
+# IO Buffers                       : 38
+#      IBUF                        : 25
+#      OBUF                        : 13
 
 Device utilization summary:
 ---------------------------
@@ -336,20 +357,20 @@ Selected Device : 6slx9tqg144-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              53  out of  11440     0%  
- Number of Slice LUTs:                  216  out of   5720     3%  
-    Number used as Logic:               216  out of   5720     3%  
+ Number of Slice Registers:              59  out of  11440     0%  
+ Number of Slice LUTs:                  407  out of   5720     7%  
+    Number used as Logic:               407  out of   5720     7%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    240
-   Number with an unused Flip Flop:     187  out of    240    77%  
-   Number with an unused LUT:            24  out of    240    10%  
-   Number of fully used LUT-FF pairs:    29  out of    240    12%  
-   Number of unique control sets:         4
+ Number of LUT Flip Flop pairs used:    432
+   Number with an unused Flip Flop:     373  out of    432    86%  
+   Number with an unused LUT:            25  out of    432     5%  
+   Number of fully used LUT-FF pairs:    34  out of    432     7%  
+   Number of unique control sets:         3
 
 IO Utilization: 
- Number of IOs:                          25
- Number of bonded IOBs:                  25  out of    102    24%  
+ Number of IOs:                          39
+ Number of bonded IOBs:                  39  out of    102    38%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
@@ -375,7 +396,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 53    |
+clk                                | BUFGP                  | 59    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -386,8 +407,8 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 15.741ns (Maximum Frequency: 63.530MHz)
-   Minimum input arrival time before clock: 2.109ns
+   Minimum period: 30.525ns (Maximum Frequency: 32.760MHz)
+   Minimum input arrival time before clock: 32.043ns
    Maximum output required time after clock: 3.597ns
    Maximum combinational path delay: No path found
 
@@ -397,75 +418,168 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 15.741ns (frequency: 63.530MHz)
-  Total number of paths / destination ports: 35347796 / 104
+  Clock period: 30.525ns (frequency: 32.760MHz)
+  Total number of paths / destination ports: 152937576065393 / 79
 -------------------------------------------------------------------------
-Delay:               15.741ns (Levels of Logic = 15)
-  Source:            tmp2_5_1 (FF)
-  Destination:       r_7 (FF)
+Delay:               30.525ns (Levels of Logic = 54)
+  Source:            setup_1 (FF)
+  Destination:       rem_0 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: tmp2_5_1 to r_7
+  Data Path: setup_1 to rem_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              2   0.447   0.981  tmp2_5_1 (tmp2_5_1)
-     LUT6:I0->O            7   0.203   0.878  tmp[7]_tmp2[7]_mod_3/BUS_0003_INV_34_o1_SW1 (N93)
-     LUT6:I4->O            6   0.203   0.973  tmp[7]_tmp2[7]_mod_3/BUS_0003_INV_34_o1 (tmp[7]_tmp2[7]_mod_3/BUS_0003_INV_34_o)
-     LUT6:I3->O           13   0.205   0.933  tmp[7]_tmp2[7]_mod_3/BUS_0004_INV_49_o1 (tmp[7]_tmp2[7]_mod_3/BUS_0004_INV_49_o)
-     LUT5:I4->O            5   0.205   0.715  tmp[7]_tmp2[7]_mod_3/BUS_0005_INV_63_o2 (tmp[7]_tmp2[7]_mod_3/BUS_0005_INV_63_o1)
-     LUT5:I4->O            2   0.205   0.721  tmp[7]_tmp2[7]_mod_3/Mmux_a[0]_GND_2_o_MUX_150_o1711 (tmp[7]_tmp2[7]_mod_3/a[7]_GND_2_o_MUX_143_o)
-     LUT6:I4->O           18   0.203   1.050  tmp[7]_tmp2[7]_mod_3/BUS_0006_INV_76_o11 (tmp[7]_tmp2[7]_mod_3/BUS_0006_INV_76_o)
-     LUT5:I4->O            6   0.205   0.973  tmp[7]_tmp2[7]_mod_3/BUS_0007_INV_88_o24_SW2 (N50)
-     LUT6:I3->O           11   0.205   0.883  tmp[7]_tmp2[7]_mod_3/BUS_0007_INV_88_o24 (tmp[7]_tmp2[7]_mod_3/BUS_0007_INV_88_o)
-     LUT6:I5->O            2   0.205   0.864  tmp[7]_tmp2[7]_mod_3/BUS_0008_INV_99_o2 (tmp[7]_tmp2[7]_mod_3/BUS_0008_INV_99_o1)
-     LUT5:I1->O           15   0.203   0.982  tmp[7]_tmp2[7]_mod_3/BUS_0008_INV_99_o1 (tmp[7]_tmp2[7]_mod_3/BUS_0008_INV_99_o2)
-     LUT6:I5->O           14   0.205   0.957  tmp[7]_tmp2[7]_mod_3/Mmux_n032271 (tmp[7]_tmp2[7]_mod_3/n0322<6>)
-     MUXCY:DI->O           0   0.145   0.000  tmp[7]_tmp2[7]_mod_3/Madd_a[7]_b[7]_add_17_OUT[7:0]_Madd_cy<6> (tmp[7]_tmp2[7]_mod_3/Madd_a[7]_b[7]_add_17_OUT[7:0]_Madd_cy<6>)
-     XORCY:CI->O           2   0.180   0.617  tmp[7]_tmp2[7]_mod_3/Madd_a[7]_b[7]_add_17_OUT[7:0]_Madd_xor<7> (tmp[7]_tmp2[7]_mod_3/a[7]_b[7]_add_17_OUT[7:0]<7>)
-     LUT5:I4->O            1   0.205   0.684  tmp[7]_tmp2[7]_mod_3/BUS_0009_INV_109_o24_SW6 (N117)
-     LUT5:I3->O            1   0.203   0.000  tmp[7]_tmp2[7]_mod_3/Mmux_o81 (tmp[7]_tmp2[7]_mod_3_OUT<7>)
-     FDE:D                     0.102          r_7
+     FD:C->Q              18   0.447   1.050  setup_1 (setup_1)
+     LUT3:I2->O           38   0.205   1.377  Mmux__n005891 (_n0058<6>)
+     LUT6:I5->O            9   0.205   0.830  tmpa[11]_tmpb[11]_mod_11/BUS_0002_INV_27_o13 (tmpa[11]_tmpb[11]_mod_11/BUS_0002_INV_27_o13)
+     LUT6:I5->O            8   0.205   0.907  tmpa[11]_tmpb[11]_mod_11/Mmux_a[0]_GND_2_o_MUX_153_o121 (tmpa[11]_tmpb[11]_mod_11/a[11]_GND_2_o_MUX_142_o)
+     LUT5:I3->O            9   0.203   0.830  tmpa[11]_tmpb[11]_mod_11/Mmux_a[0]_GND_2_o_MUX_195_o1211 (tmpa[11]_tmpb[11]_mod_11/a[11]_GND_2_o_MUX_184_o)
+     LUT6:I5->O           16   0.205   1.005  tmpa[11]_tmpb[11]_mod_11/BUS_0005_INV_96_o2 (tmpa[11]_tmpb[11]_mod_11/BUS_0005_INV_96_o)
+     LUT6:I5->O            6   0.205   0.849  tmpa[11]_tmpb[11]_mod_11/Mmux_a[0]_GND_2_o_MUX_235_o121 (tmpa[11]_tmpb[11]_mod_11/a[11]_GND_2_o_MUX_224_o)
+     LUT6:I4->O           13   0.203   0.933  tmpa[11]_tmpb[11]_mod_11/BUS_0006_INV_117_o2 (tmpa[11]_tmpb[11]_mod_11/BUS_0006_INV_117_o)
+     LUT4:I3->O            6   0.205   0.744  tmpa[11]_tmpb[11]_mod_11/Mmux_a[0]_GND_2_o_MUX_273_o112 (tmpa[11]_tmpb[11]_mod_11/a[10]_GND_2_o_MUX_263_o)
+     MUXCY:DI->O           0   0.145   0.000  tmpa[11]_tmpb[11]_mod_11/Madd_GND_2_o_b[11]_add_13_OUT_Madd_Madd_cy<10> (tmpa[11]_tmpb[11]_mod_11/Madd_GND_2_o_b[11]_add_13_OUT_Madd_Madd_cy<10>)
+     XORCY:CI->O           4   0.180   0.684  tmpa[11]_tmpb[11]_mod_11/Madd_GND_2_o_b[11]_add_13_OUT_Madd_Madd_xor<11> (tmpa[11]_tmpb[11]_mod_11/GND_2_o_b[11]_add_13_OUT<11>)
+     LUT6:I5->O            1   0.205   0.684  tmpa[11]_tmpb[11]_mod_11/BUS_0007_INV_137_o24_SW9 (N94)
+     LUT5:I3->O            5   0.203   0.819  tmpa[11]_tmpb[11]_mod_11/Mmux_a[0]_GND_2_o_MUX_309_o121 (tmpa[11]_tmpb[11]_mod_11/a[11]_GND_2_o_MUX_298_o)
+     LUT5:I3->O            1   0.203   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0008_INV_156_o_lut<3> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0008_INV_156_o_lut<3>)
+     MUXCY:S->O            1   0.172   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0008_INV_156_o_cy<3> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0008_INV_156_o_cy<3>)
+     MUXCY:CI->O          28   0.213   1.235  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0008_INV_156_o_cy<4> (tmpa[11]_tmpb[11]_mod_11/BUS_0008_INV_156_o)
+     LUT5:I4->O            3   0.205   0.898  tmpa[11]_tmpb[11]_mod_11/Mmux_a[0]_GND_2_o_MUX_343_o171 (tmpa[11]_tmpb[11]_mod_11/a[5]_GND_2_o_MUX_338_o)
+     LUT4:I0->O            0   0.203   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0009_INV_174_o_lutdi (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0009_INV_174_o_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0009_INV_174_o_cy<0> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0009_INV_174_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0009_INV_174_o_cy<1> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0009_INV_174_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0009_INV_174_o_cy<2> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0009_INV_174_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0009_INV_174_o_cy<3> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0009_INV_174_o_cy<3>)
+     MUXCY:CI->O          24   0.213   1.173  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0009_INV_174_o_cy<4> (tmpa[11]_tmpb[11]_mod_11/BUS_0009_INV_174_o)
+     LUT5:I4->O            5   0.205   0.962  tmpa[11]_tmpb[11]_mod_11/Mmux_a[0]_GND_2_o_MUX_375_o161 (tmpa[11]_tmpb[11]_mod_11/a[4]_GND_2_o_MUX_371_o)
+     LUT4:I0->O            0   0.203   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0010_INV_191_o_lutdi (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0010_INV_191_o_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0010_INV_191_o_cy<0> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0010_INV_191_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0010_INV_191_o_cy<1> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0010_INV_191_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0010_INV_191_o_cy<2> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0010_INV_191_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0010_INV_191_o_cy<3> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0010_INV_191_o_cy<3>)
+     MUXCY:CI->O          36   0.213   1.349  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0010_INV_191_o_cy<4> (tmpa[11]_tmpb[11]_mod_11/BUS_0010_INV_191_o)
+     LUT5:I4->O            4   0.205   0.931  tmpa[11]_tmpb[11]_mod_11/Mmux_a[0]_GND_2_o_MUX_405_o151 (tmpa[11]_tmpb[11]_mod_11/a[3]_GND_2_o_MUX_402_o)
+     LUT4:I0->O            0   0.203   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0011_INV_207_o_lutdi (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0011_INV_207_o_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0011_INV_207_o_cy<0> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0011_INV_207_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0011_INV_207_o_cy<1> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0011_INV_207_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0011_INV_207_o_cy<2> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0011_INV_207_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0011_INV_207_o_cy<3> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0011_INV_207_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0011_INV_207_o_cy<4> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0011_INV_207_o_cy<4>)
+     MUXCY:CI->O          40   0.213   1.406  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0011_INV_207_o_cy<5> (tmpa[11]_tmpb[11]_mod_11/BUS_0011_INV_207_o)
+     LUT5:I4->O            3   0.205   0.898  tmpa[11]_tmpb[11]_mod_11/Mmux_a[0]_GND_2_o_MUX_433_o141 (tmpa[11]_tmpb[11]_mod_11/a[2]_GND_2_o_MUX_431_o)
+     LUT4:I0->O            0   0.203   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0012_INV_222_o_lutdi (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0012_INV_222_o_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0012_INV_222_o_cy<0> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0012_INV_222_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0012_INV_222_o_cy<1> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0012_INV_222_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0012_INV_222_o_cy<2> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0012_INV_222_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0012_INV_222_o_cy<3> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0012_INV_222_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0012_INV_222_o_cy<4> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0012_INV_222_o_cy<4>)
+     MUXCY:CI->O          33   0.213   1.306  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0012_INV_222_o_cy<5> (tmpa[11]_tmpb[11]_mod_11/BUS_0012_INV_222_o)
+     LUT5:I4->O            2   0.205   0.864  tmpa[11]_tmpb[11]_mod_11/Mmux_n062241 (tmpa[11]_tmpb[11]_mod_11/n0622<1>)
+     LUT4:I0->O            0   0.203   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0013_INV_236_o_lutdi (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0013_INV_236_o_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0013_INV_236_o_cy<0> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0013_INV_236_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0013_INV_236_o_cy<1> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0013_INV_236_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0013_INV_236_o_cy<2> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0013_INV_236_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0013_INV_236_o_cy<3> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0013_INV_236_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0013_INV_236_o_cy<4> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0013_INV_236_o_cy<4>)
+     MUXCY:CI->O          12   0.213   0.909  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0013_INV_236_o_cy<5> (tmpa[11]_tmpb[11]_mod_11/BUS_0013_INV_236_o)
+     LUT5:I4->O            1   0.205   0.000  tmpa[11]_tmpb[11]_mod_11/Mmux_o13 (tmpa[11]_tmpb[11]_mod_11_OUT<0>)
+     FDE:D                     0.102          rem_0
     ----------------------------------------
-    Total                     15.741ns (3.529ns logic, 12.212ns route)
-                                       (22.4% logic, 77.6% route)
+    Total                     30.525ns (7.883ns logic, 22.642ns route)
+                                       (25.8% logic, 74.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 35 / 35
+  Total number of paths / destination ports: 91056587137446 / 79
 -------------------------------------------------------------------------
-Offset:              2.109ns (Levels of Logic = 2)
-  Source:            a<0> (PAD)
-  Destination:       tmp_0 (FF)
+Offset:              32.043ns (Levels of Logic = 56)
+  Source:            b<2> (PAD)
+  Destination:       rem_0 (FF)
   Destination Clock: clk rising
 
-  Data Path: a<0> to tmp_0
+  Data Path: b<2> to rem_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.222   0.580  a_0_IBUF (a_0_IBUF)
-     LUT3:I2->O            1   0.205   0.000  Mmux_state[1]_a[7]_wide_mux_4_OUT11 (state[1]_a[7]_wide_mux_4_OUT<0>)
-     FDE:D                     0.102          tmp_0
+     IBUF:I->O            21   1.222   1.218  b_2_IBUF (b_2_IBUF)
+     LUT4:I2->O            1   0.203   0.944  tmpa[11]_tmpb[11]_mod_11/BUS_0002_INV_27_o13_SW0_SW0 (N22)
+     LUT6:I0->O            1   0.203   0.808  tmpa[11]_tmpb[11]_mod_11/BUS_0002_INV_27_o13_SW0 (N8)
+     LUT6:I3->O            9   0.205   0.830  tmpa[11]_tmpb[11]_mod_11/BUS_0002_INV_27_o13 (tmpa[11]_tmpb[11]_mod_11/BUS_0002_INV_27_o13)
+     LUT6:I5->O            8   0.205   0.907  tmpa[11]_tmpb[11]_mod_11/Mmux_a[0]_GND_2_o_MUX_153_o121 (tmpa[11]_tmpb[11]_mod_11/a[11]_GND_2_o_MUX_142_o)
+     LUT5:I3->O            9   0.203   0.830  tmpa[11]_tmpb[11]_mod_11/Mmux_a[0]_GND_2_o_MUX_195_o1211 (tmpa[11]_tmpb[11]_mod_11/a[11]_GND_2_o_MUX_184_o)
+     LUT6:I5->O           16   0.205   1.005  tmpa[11]_tmpb[11]_mod_11/BUS_0005_INV_96_o2 (tmpa[11]_tmpb[11]_mod_11/BUS_0005_INV_96_o)
+     LUT6:I5->O            6   0.205   0.849  tmpa[11]_tmpb[11]_mod_11/Mmux_a[0]_GND_2_o_MUX_235_o121 (tmpa[11]_tmpb[11]_mod_11/a[11]_GND_2_o_MUX_224_o)
+     LUT6:I4->O           13   0.203   0.933  tmpa[11]_tmpb[11]_mod_11/BUS_0006_INV_117_o2 (tmpa[11]_tmpb[11]_mod_11/BUS_0006_INV_117_o)
+     LUT4:I3->O            6   0.205   0.744  tmpa[11]_tmpb[11]_mod_11/Mmux_a[0]_GND_2_o_MUX_273_o112 (tmpa[11]_tmpb[11]_mod_11/a[10]_GND_2_o_MUX_263_o)
+     MUXCY:DI->O           0   0.145   0.000  tmpa[11]_tmpb[11]_mod_11/Madd_GND_2_o_b[11]_add_13_OUT_Madd_Madd_cy<10> (tmpa[11]_tmpb[11]_mod_11/Madd_GND_2_o_b[11]_add_13_OUT_Madd_Madd_cy<10>)
+     XORCY:CI->O           4   0.180   0.684  tmpa[11]_tmpb[11]_mod_11/Madd_GND_2_o_b[11]_add_13_OUT_Madd_Madd_xor<11> (tmpa[11]_tmpb[11]_mod_11/GND_2_o_b[11]_add_13_OUT<11>)
+     LUT6:I5->O            1   0.205   0.684  tmpa[11]_tmpb[11]_mod_11/BUS_0007_INV_137_o24_SW9 (N94)
+     LUT5:I3->O            5   0.203   0.819  tmpa[11]_tmpb[11]_mod_11/Mmux_a[0]_GND_2_o_MUX_309_o121 (tmpa[11]_tmpb[11]_mod_11/a[11]_GND_2_o_MUX_298_o)
+     LUT5:I3->O            1   0.203   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0008_INV_156_o_lut<3> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0008_INV_156_o_lut<3>)
+     MUXCY:S->O            1   0.172   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0008_INV_156_o_cy<3> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0008_INV_156_o_cy<3>)
+     MUXCY:CI->O          28   0.213   1.235  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0008_INV_156_o_cy<4> (tmpa[11]_tmpb[11]_mod_11/BUS_0008_INV_156_o)
+     LUT5:I4->O            3   0.205   0.898  tmpa[11]_tmpb[11]_mod_11/Mmux_a[0]_GND_2_o_MUX_343_o171 (tmpa[11]_tmpb[11]_mod_11/a[5]_GND_2_o_MUX_338_o)
+     LUT4:I0->O            0   0.203   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0009_INV_174_o_lutdi (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0009_INV_174_o_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0009_INV_174_o_cy<0> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0009_INV_174_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0009_INV_174_o_cy<1> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0009_INV_174_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0009_INV_174_o_cy<2> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0009_INV_174_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0009_INV_174_o_cy<3> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0009_INV_174_o_cy<3>)
+     MUXCY:CI->O          24   0.213   1.173  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0009_INV_174_o_cy<4> (tmpa[11]_tmpb[11]_mod_11/BUS_0009_INV_174_o)
+     LUT5:I4->O            5   0.205   0.962  tmpa[11]_tmpb[11]_mod_11/Mmux_a[0]_GND_2_o_MUX_375_o161 (tmpa[11]_tmpb[11]_mod_11/a[4]_GND_2_o_MUX_371_o)
+     LUT4:I0->O            0   0.203   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0010_INV_191_o_lutdi (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0010_INV_191_o_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0010_INV_191_o_cy<0> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0010_INV_191_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0010_INV_191_o_cy<1> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0010_INV_191_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0010_INV_191_o_cy<2> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0010_INV_191_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0010_INV_191_o_cy<3> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0010_INV_191_o_cy<3>)
+     MUXCY:CI->O          36   0.213   1.349  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0010_INV_191_o_cy<4> (tmpa[11]_tmpb[11]_mod_11/BUS_0010_INV_191_o)
+     LUT5:I4->O            4   0.205   0.931  tmpa[11]_tmpb[11]_mod_11/Mmux_a[0]_GND_2_o_MUX_405_o151 (tmpa[11]_tmpb[11]_mod_11/a[3]_GND_2_o_MUX_402_o)
+     LUT4:I0->O            0   0.203   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0011_INV_207_o_lutdi (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0011_INV_207_o_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0011_INV_207_o_cy<0> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0011_INV_207_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0011_INV_207_o_cy<1> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0011_INV_207_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0011_INV_207_o_cy<2> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0011_INV_207_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0011_INV_207_o_cy<3> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0011_INV_207_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0011_INV_207_o_cy<4> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0011_INV_207_o_cy<4>)
+     MUXCY:CI->O          40   0.213   1.406  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0011_INV_207_o_cy<5> (tmpa[11]_tmpb[11]_mod_11/BUS_0011_INV_207_o)
+     LUT5:I4->O            3   0.205   0.898  tmpa[11]_tmpb[11]_mod_11/Mmux_a[0]_GND_2_o_MUX_433_o141 (tmpa[11]_tmpb[11]_mod_11/a[2]_GND_2_o_MUX_431_o)
+     LUT4:I0->O            0   0.203   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0012_INV_222_o_lutdi (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0012_INV_222_o_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0012_INV_222_o_cy<0> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0012_INV_222_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0012_INV_222_o_cy<1> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0012_INV_222_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0012_INV_222_o_cy<2> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0012_INV_222_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0012_INV_222_o_cy<3> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0012_INV_222_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0012_INV_222_o_cy<4> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0012_INV_222_o_cy<4>)
+     MUXCY:CI->O          33   0.213   1.306  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0012_INV_222_o_cy<5> (tmpa[11]_tmpb[11]_mod_11/BUS_0012_INV_222_o)
+     LUT5:I4->O            2   0.205   0.864  tmpa[11]_tmpb[11]_mod_11/Mmux_n062241 (tmpa[11]_tmpb[11]_mod_11/n0622<1>)
+     LUT4:I0->O            0   0.203   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0013_INV_236_o_lutdi (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0013_INV_236_o_lutdi)
+     MUXCY:DI->O           1   0.145   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0013_INV_236_o_cy<0> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0013_INV_236_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0013_INV_236_o_cy<1> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0013_INV_236_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0013_INV_236_o_cy<2> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0013_INV_236_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0013_INV_236_o_cy<3> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0013_INV_236_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0013_INV_236_o_cy<4> (tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0013_INV_236_o_cy<4>)
+     MUXCY:CI->O          12   0.213   0.909  tmpa[11]_tmpb[11]_mod_11/Mcompar_BUS_0013_INV_236_o_cy<5> (tmpa[11]_tmpb[11]_mod_11/BUS_0013_INV_236_o)
+     LUT5:I4->O            1   0.205   0.000  tmpa[11]_tmpb[11]_mod_11/Mmux_o13 (tmpa[11]_tmpb[11]_mod_11_OUT<0>)
+     FDE:D                     0.102          rem_0
     ----------------------------------------
-    Total                      2.109ns (1.529ns logic, 0.580ns route)
-                                       (72.5% logic, 27.5% route)
+    Total                     32.043ns (8.859ns logic, 23.184ns route)
+                                       (27.6% logic, 72.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 8 / 8
+  Total number of paths / destination ports: 12 / 12
 -------------------------------------------------------------------------
 Offset:              3.597ns (Levels of Logic = 1)
-  Source:            c_7 (FF)
-  Destination:       c<7> (PAD)
+  Source:            gcd_11 (FF)
+  Destination:       gcd<11> (PAD)
   Source Clock:      clk rising
 
-  Data Path: c_7 to c<7>
+  Data Path: gcd_11 to gcd<11>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              1   0.447   0.579  c_7 (c_7)
-     OBUF:I->O                 2.571          c_7_OBUF (c<7>)
+     FDE:C->Q              1   0.447   0.579  gcd_11 (gcd_11)
+     OBUF:I->O                 2.571          gcd_11_OBUF (gcd<11>)
     ----------------------------------------
     Total                      3.597ns (3.018ns logic, 0.579ns route)
                                        (83.9% logic, 16.1% route)
@@ -480,21 +594,21 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |   15.741|         |         |         |
+clk            |   30.525|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 7.21 secs
+Total REAL time to Xst completion: 29.00 secs
+Total CPU time to Xst completion: 27.39 secs
  
 --> 
 
 
-Total memory usage is 482604 kilobytes
+Total memory usage is 483596 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

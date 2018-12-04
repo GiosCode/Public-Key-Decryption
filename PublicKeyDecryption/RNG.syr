@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> 
 Reading design: RNG.prj
@@ -116,7 +116,7 @@ Parsing module <RNG>.
 =========================================================================
 
 Elaborating module <RNG>.
-WARNING:HDLCompiler:413 - "/home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/RNG.v" Line 28: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/RNG.v" Line 27: Result of 13-bit expression is truncated to fit in 12-bit target.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -328,8 +328,8 @@ clk            |    1.650|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 15.00 secs
-Total CPU time to Xst completion: 13.68 secs
+Total REAL time to Xst completion: 22.00 secs
+Total CPU time to Xst completion: 18.65 secs
  
 --> 
 
