@@ -45,8 +45,8 @@ module privateKeyGen_tb;
 	initial begin
 		// Initialize Inputs
 		clk = 0;
-		e = 3;
-		totient = 20;
+		e = 7;
+		totient = 120;
 
 		// Wait 100 ns for global reset to finish
 		#100;

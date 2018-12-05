@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "/home/ise/XIlinxShare/Public-Key Decryption/PublicKeyDecryption/privatekeyGen.v";
+static const char *ng0 = "/home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/privatekeyGen.v";
 static unsigned int ng1[] = {0U, 0U};
 static int ng2[] = {1, 0};
 static unsigned int ng3[] = {3U, 0U};
