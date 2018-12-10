@@ -1,28 +1,28 @@
 Command line:
    RNG_tb_isim_beh.exe
      -simmode  gui
-     -simrunnum  1
-     -socket  54569
+     -simrunnum  0
+     -socket  41991
 
-Tue Dec  4 09:47:33 2018
+Mon Dec 10 05:34:49 2018
 
 
- Elaboration Time: 0.05 sec
+ Elaboration Time: 0.03 sec
 
- Current Memory Usage: 198.578 Meg
+ Current Memory Usage: 198.574 Meg
 
  Total Signals          : 16
- Total Nets             : 26
- Total Signal Drivers   : 7
+ Total Nets             : 22
+ Total Signal Drivers   : 8
  Total Blocks           : 3
  Total Primitive Blocks : 2
- Total Processes        : 10
- Total Traceable Variables  : 20
- Total Scalar Nets and Variables : 119
+ Total Processes        : 11
+ Total Traceable Variables  : 23
+ Total Scalar Nets and Variables : 125
 
- Total Simulation Time: 0.06 sec
+ Total Simulation Time: 0.03 sec
 
- Current Memory Usage: 276.177 Meg
+ Current Memory Usage: 276.173 Meg
 
-Tue Dec  4 09:47:56 2018
+Mon Dec 10 05:34:59 2018
 

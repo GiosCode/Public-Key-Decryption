@@ -20,12 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 module GCD(
 				input clk,
-				input [11:0]a,
-				input [11:0]b,
+				input [11:0]a,//e
+				input [11:0]b,//totient
 				input flag,
 				output reg [11:0]gcd,
-				output reg complete
-    );
+				output reg complete);
 reg [11:0]tmpa = 0;
 reg [11:0]tmpb = 0;
 
@@ -41,41 +40,41 @@ reg [1:0]state = checkLoop;
 reg done = 0;//Once this is set to one you found gcd
 
 	always@(posedge clk) begin
-	if(setup == 0)begin
-	tmpa = a;
-	tmpb = b;
-	setup = 1;
-   end
-		if(flag == 1) begin
-		case(state)
-		checkLoop: begin
-			if(tmpa == 0) begin
-			gcd = tmpb;
-			state = finished;
+		if(setup == 0)begin
+			tmpa = a;
+			tmpb = b;
+			setup = 1;
+		end
+			if(flag == 1) begin
+				case(state)
+				checkLoop: begin
+					if(tmpa == 0) begin//gcd of e and totient == 1
+					gcd = tmpb;
+					state = finished;
+					end
+					else if(tmpb == 0) begin
+					gcd = tmpa;
+					state = finished;
+					end
+					else begin
+					state = opOne;
+					end
+				end
+				opOne: begin
+				rem = tmpa % tmpb;
+				state = opTwo;
+				end
+				opTwo: begin
+				tmpa = tmpb;
+				tmpb = rem;
+				state = checkLoop;
+				end
+				finished: begin
+				complete = 1;
+				end
+				default: complete = 0;
+				endcase
 			end
-			else if(tmpb == 0) begin
-			gcd = tmpa;
-			state = finished;
-			end
-			else begin
-			state = opOne;
-			end
-		end
-		opOne: begin
-		rem = tmpa % tmpb;
-		state = opTwo;
-		end
-		opTwo: begin
-		tmpa = tmpb;
-		tmpb = rem;
-		state = checkLoop;
-		end
-		finished: begin
-		complete = 1;
-		end
-		default: complete = 0;
-		endcase
-		end
 	end
 	
 endmodule

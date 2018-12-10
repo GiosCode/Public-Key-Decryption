@@ -4,9 +4,9 @@
 // Company: 
 // Engineer:
 //
-// Create Date:   19:44:46 11/27/2018
+// Create Date:   05:29:21 12/10/2018
 // Design Name:   RNG
-// Module Name:   /home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/RNG_tb.v
+// Module Name:   /home/ise/XIlinxShare/Public-Key Decryption/PublicKeyDecryption/RNG_tb.v
 // Project Name:  PublicKeyDecryption
 // Target Device:  
 // Tool versions:  
@@ -26,19 +26,22 @@ module RNG_tb;
 
 	// Inputs
 	reg clk;
+	reg send;
 
 	// Outputs
-	wire [11:0] rand;
+	wire [6:0] rand;
 
 	// Instantiate the Unit Under Test (UUT)
 	RNG uut (
 		.clk(clk), 
+		.send(send), 
 		.rand(rand)
 	);
 
 	initial begin
 		// Initialize Inputs
 		clk = 0;
+		send = 1;
 
 		// Wait 100 ns for global reset to finish
 		#100;
@@ -48,7 +51,9 @@ module RNG_tb;
 		#5;
 		clk = !clk;
 		end
-
+		send = 1;
+		#20
+		send = 0;
 	end
       
 endmodule

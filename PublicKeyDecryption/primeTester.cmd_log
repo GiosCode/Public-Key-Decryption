@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "/home/ise/XIlinxShare/Public-Key Decryption/PublicKeyDecryption/primeTester.xst" -ofn "/home/ise/XIlinxShare/Public-Key Decryption/PublicKeyDecryption/primeTester.syr" 
+xst -intstyle ise -ifn "/home/ise/XIlinxShare/Public-Key Decryption/PublicKeyDecryption/primeTester.xst" -ofn "/home/ise/XIlinxShare/Public-Key Decryption/PublicKeyDecryption/primeTester.syr" 
+xst -intstyle ise -ifn "/home/ise/XIlinxShare/Public-Key Decryption/PublicKeyDecryption/primeTester.xst" -ofn "/home/ise/XIlinxShare/Public-Key Decryption/PublicKeyDecryption/primeTester.syr" 
+xst -intstyle ise -ifn "/home/ise/XIlinxShare/Public-Key Decryption/PublicKeyDecryption/primeTester.xst" -ofn "/home/ise/XIlinxShare/Public-Key Decryption/PublicKeyDecryption/primeTester.syr" 
+xst -intstyle ise -ifn "/home/ise/XIlinxShare/Public-Key Decryption/PublicKeyDecryption/primeTester.xst" -ofn "/home/ise/XIlinxShare/Public-Key Decryption/PublicKeyDecryption/primeTester.syr" 

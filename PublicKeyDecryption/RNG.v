@@ -19,12 +19,13 @@
 // Additional Comments: 
 //works
 //////////////////////////////////////////////////////////////////////////////////
-module RNG(input clk,
-			output wire[11:0]rand);
+module RNG #(parameter SEED = 7'b0100011)
+				(input clk,
+				 output reg [6:0]rand);
 			
-reg [11:0]data = 12'b101101001000;//Initial seed
+reg [6:0]data = SEED;//Initial seed
 always @(posedge clk) begin
-	data <= {data[11:0], data[0]^data[3]^data[5]^data[11]};
+	data <= {data[6:0], data[3]^data[4]^data[5]^data[6]};//Taps are 3, 4, 5, 6 bits: http://courses.cse.tamu.edu/walker/csce680/lfsr_table.pdf
 end
-assign rand = data;
+	
 endmodule
