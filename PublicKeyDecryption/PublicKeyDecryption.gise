@@ -209,19 +209,9 @@
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="GCD.v"/>
-      <outfile xil_pn:name="GCD_tb.v"/>
-      <outfile xil_pn:name="RNG.v"/>
-      <outfile xil_pn:name="RNG_tb.v"/>
-      <outfile xil_pn:name="ioContro_tb.v"/>
-      <outfile xil_pn:name="ioControl.v"/>
-      <outfile xil_pn:name="modExp.v"/>
-      <outfile xil_pn:name="modExp_tb.v"/>
-      <outfile xil_pn:name="modulusTotient.v"/>
-      <outfile xil_pn:name="primeTester.v"/>
-      <outfile xil_pn:name="privateKeyGen_tb.v"/>
-      <outfile xil_pn:name="privatekeyGen.v"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1544421589" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="4254154119924753849" xil_pn:start_ts="1544421589">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -242,19 +232,9 @@
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="GCD.v"/>
-      <outfile xil_pn:name="GCD_tb.v"/>
-      <outfile xil_pn:name="RNG.v"/>
-      <outfile xil_pn:name="RNG_tb.v"/>
-      <outfile xil_pn:name="ioContro_tb.v"/>
-      <outfile xil_pn:name="ioControl.v"/>
-      <outfile xil_pn:name="modExp.v"/>
-      <outfile xil_pn:name="modExp_tb.v"/>
-      <outfile xil_pn:name="modulusTotient.v"/>
-      <outfile xil_pn:name="primeTester.v"/>
-      <outfile xil_pn:name="privateKeyGen_tb.v"/>
-      <outfile xil_pn:name="privatekeyGen.v"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1544422719" xil_pn:in_ck="-6510438031885488573" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-3810662953080717839" xil_pn:start_ts="1544422716">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -264,24 +244,20 @@
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="fuse.log"/>
-      <outfile xil_pn:name="ioContro_tb_beh.prj"/>
-      <outfile xil_pn:name="ioContro_tb_isim_beh.exe"/>
-      <outfile xil_pn:name="isim"/>
-      <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="xilinxsim.ini"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1544422719" xil_pn:in_ck="6794889202341555809" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="3804556543601707732" xil_pn:start_ts="1544422719">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="ioContro_tb_isim_beh.wdb"/>
-      <outfile xil_pn:name="isim.cmd"/>
-      <outfile xil_pn:name="isim.log"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1544415536" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1544415536">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -291,7 +267,6 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
   </transforms>
 

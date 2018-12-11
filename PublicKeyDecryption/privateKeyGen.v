@@ -20,10 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 module privatekeyGen#(parameter INPUTSIZE = 12)(
 								input clk,
+								input rst,
 								input [INPUTSIZE-1:0]e,
 								input [INPUTSIZE-1:0]totient,
 								output reg [INPUTSIZE-1:0]d,
-								output reg flag
+								output reg  complete
     );
 
 reg [INPUTSIZE-1:0]tempD = 0;
@@ -55,10 +56,18 @@ reg [1:0]state = loopCheck;
 			state = loopCheck;
 		end
 		finished: begin
-			d = tempD;
-			flag = 1;
+			if(rst == 1) begin
+				state = loopCheck
+				tempD = 0;
+				mod = 0;
+				ed = 0;
+			end
+			else begin 
+				d = tempD;
+				complete = 1;
+			end
 		end
-		default: begin d = 0; flag = 0; end
+		default: begin d = 0; complete = 0; end
 		endcase
 	end
 endmodule

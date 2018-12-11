@@ -19,13 +19,28 @@
 // Additional Comments: 
 //works
 //////////////////////////////////////////////////////////////////////////////////
-module RNG #(parameter SEED = 7'b0100011)
-				(input clk,
-				 output reg [6:0]rand);
-			
-reg [6:0]data = SEED;//Initial seed
+module RNG(input clk,
+			output wire[11:0]q, p,input wire[23:0] e, output wire [23:0] totient, output wire [23:0] n);
+reg [11:0] prime [127:0];
+initial begin
+                $readmemh ("prime.mem", prime);
+            end        
+            
+reg [6:0]data = 7'b1101001;//Initial seed
+reg [11:0] q_temp;
+reg [11:0] p_temp;
+reg [23:0] e_temp;
+wire [11:0] n;
 always @(posedge clk) begin
-	data <= {data[6:0], data[3]^data[4]^data[5]^data[6]};//Taps are 3, 4, 5, 6 bits: http://courses.cse.tamu.edu/walker/csce680/lfsr_table.pdf
+	data <= {data[6:0], data[0]^data[6]};
+	q_temp <= prime [data-15];
+	p_temp <= prime [data%5];
+	e_temp <= prime [data]* prime[data];
 end
-	
+assign q = q_temp;
+assign p = p_temp;
+assign e = e_temp;
+assign totient = (p-1)*(q-1);
+assign n = (p*q);
+
 endmodule

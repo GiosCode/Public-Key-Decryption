@@ -23,7 +23,6 @@ module modExp #(parameter MSGINSIZE = 12)(
 					input[MSGINSIZE-1:0]msgIn,
 					input[11:0]key,
 					input[11:0]n,
-					input decEnc,
 					output reg [MSGINSIZE-1:0]msgOut
     );
 //msgOut = [msgIN^(key)] % n
