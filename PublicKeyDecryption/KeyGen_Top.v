@@ -20,10 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module KeyGen_Top(input clk,input [1:0] en, output [11:0] q, p, output [23:0] etemp, n,totient,d, output complete);
+module KeyGen_Top(input clk,input en, output [11:0] q, p, output [23:0] etemp, n,totient,d, output complete);
 wire rst;
 wire [23:0]etempyo;
-        RNG rng_0(.clk(clk),.q(q), .p(p),.e(etempyo),.n(n),.totient(totient),.en(en), .flag(rst));
+wire privKeyEN;
+        RNG rng_0(.clk(clk),.q(q), .p(p),.e(etempyo),.n(n),.totient(totient),.en(en), .flag(privKeyEN));
         privatekeyGen pvg_0(.clk(clk),.e(etempyo), .totient(totient), .d(d), .rst(rst),.complete(complete)); 
 		  assign etemp = etempyo;
 endmodule

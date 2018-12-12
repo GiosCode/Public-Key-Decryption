@@ -19,8 +19,15 @@
 // Additional Comments: 
 //works
 //////////////////////////////////////////////////////////////////////////////////
-module RNG(input clk, input [1:0] en, input none,
-			output reg[11:0]q, p,output reg[23:0] e, output reg [23:0] totient, output reg [23:0] n, output reg flag);
+module RNG(
+			input clk, 
+			input en, 
+			input none,
+			output reg[11:0]q, p,
+			output reg[23:0] e, 
+			output reg [23:0] totient, 
+			output reg [23:0] n, 
+			output reg flag);
 reg [11:0] prime [6:0];
 reg [11:0] prime1 [6:0];
 reg [11:0] prime2 [6:0];
@@ -69,6 +76,6 @@ always @(posedge clk) begin
          e <= e_temp;
          totient <= (p-1'b1)*(q-1'b1);
          n <= (p*q);
-         flag <= 0;
+         flag <= 1;
 end
 endmodule

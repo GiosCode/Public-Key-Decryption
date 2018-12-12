@@ -42,7 +42,7 @@ module privatekeyGen#(parameter INPUTSIZE = 24)(
 
 								input clk,
 								input rst,
-
+								input pkEnable,
 								input [INPUTSIZE-1:0]e,
 
 								input [INPUTSIZE-1:0]totient,
@@ -76,7 +76,7 @@ reg [1:0]state = loopCheck;
 	always@(posedge clk) begin
 
 		case(state)
-
+if(pkEnable == 1) begin
 		loopCheck: begin
 
 			if(mod == 1)begin
@@ -128,6 +128,6 @@ reg [1:0]state = loopCheck;
 		default: begin d = 0; complete = 0; end
 
 		endcase
-
+end
 	end
 endmodule

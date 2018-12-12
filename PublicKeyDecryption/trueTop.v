@@ -20,11 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module trueTop(input btnC, input [15:0] sw, input btnU, input btnD, input clk, output [15:0] led);
+module trueTop(input btnC, input [11:0] sw, input btnU, input btnD, input clk, output [11:0] led);
 wire [11:0] p,q;
 reg [1:0] en;
 wire [23:0] e, n, totient, d;
-reg [1:0] state;
+//reg [1:0] state;
 reg [1:0] rst;
 reg [1:0] finished;
 reg [11:0] message;
