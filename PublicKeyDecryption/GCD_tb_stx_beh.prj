@@ -1,3 +1,0 @@
-verilog isim_temp "GCD.v"
-verilog isim_temp "GCD_tb.v"
-verilog isim_temp "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

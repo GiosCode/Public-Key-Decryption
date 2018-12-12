@@ -20,16 +20,19 @@
 //////////////////////////////////////////////////////////////////////////////////
 module modExp #(parameter MSGINSIZE = 12)(
 					input clk,
-					input[MSGINSIZE-1:0]msgIn,
-					input[11:0]key,
-					input[11:0]n,
-					output reg [MSGINSIZE-1:0]msgOut
+					input[11:0]msgIn,
+					input[23:0]key,
+					input[23:0]n,
+					input start,
+					input rst,
+					output reg [11:0]msgOut,
+					output reg  fins
     );
 //msgOut = [msgIN^(key)] % n
 
 reg [11:0]res = 1;
-reg [(2*MSGINSIZE)-1:0]x = 0;
-reg [11:0]y = 0;
+reg [47:0]x = 0;
+reg [23:0]y = 0;
 
 parameter setup = 3'b000;
 parameter check1 = 3'b001;
@@ -40,6 +43,7 @@ parameter finished = 3'b100;
 reg [2:0] state = setup;
 
 always@(posedge clk) begin
+	if(start == 1) begin
 	case(state) 
 		setup: begin
 			x = msgIn % n;
@@ -67,9 +71,14 @@ always@(posedge clk) begin
 			state = check1;
 		end
 		finished: begin
+			if(rst == 1) begin
+			state = setup; 
+			end
+			fins =1;
 			msgOut = res;
 		end
 	default: msgOut = 0;
 	endcase
+end
 end
 endmodule

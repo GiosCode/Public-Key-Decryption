@@ -1,0 +1,7 @@
+verilog work "RNG.v"
+verilog work "privatekeyGen.v"
+verilog work "modExp.v"
+verilog work "KeyGen_Top.v"
+verilog work "trueTop.v"
+verilog work "trueTop_tb.v"
+verilog work "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

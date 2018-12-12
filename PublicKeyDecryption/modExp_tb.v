@@ -4,7 +4,7 @@
 // Company: 
 // Engineer:
 //
-// Create Date:   03:03:57 12/04/2018
+// Create Date:   04:34:27 12/12/2018
 // Design Name:   modExp
 // Module Name:   /home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/modExp_tb.v
 // Project Name:  PublicKeyDecryption
@@ -27,11 +27,14 @@ module modExp_tb;
 	// Inputs
 	reg clk;
 	reg [11:0] msgIn;
-	reg [11:0] key;
-	reg [11:0] n;
+	reg [23:0] key;
+	reg [23:0] n;
+	reg start;
+	reg rst;
 
 	// Outputs
 	wire [11:0] msgOut;
+	wire fins;
 
 	// Instantiate the Unit Under Test (UUT)
 	modExp uut (
@@ -39,26 +42,32 @@ module modExp_tb;
 		.msgIn(msgIn), 
 		.key(key), 
 		.n(n), 
-		.msgOut(msgOut)
+		.start(start), 
+		.rst(rst), 
+		.msgOut(msgOut), 
+		.fins(fins)
 	);
 
 	initial begin
 		// Initialize Inputs
 		clk = 0;
-		msgIn = 300;
-		key = 100;
-		n = 143;
+		msgIn = 0;
+		key =0;
+		n = 0;
+		start = 0;
+		rst = 0;
 
 		// Wait 100 ns for global reset to finish
 		#100;
-        
+      msgIn = 9;
+		key =7 ;
+		n = 143;
+		start = 1;
 		// Add stimulus here
-		forever begin
-		#5;
-		clk = !clk;
-		end
+		
 
 	end
-      
+      always
+	#5 clk = !clk;
 endmodule
 

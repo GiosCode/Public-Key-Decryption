@@ -1,21 +1,41 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /home/ise/XIlinxShare/Public-Key Decryption/PublicKeyDecryption/ioContro_tb_isim_beh.exe -prj /home/ise/XIlinxShare/Public-Key Decryption/PublicKeyDecryption/ioContro_tb_beh.prj ioContro_tb work.glbl 
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/trueTop_tb_isim_beh.exe -prj /home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/trueTop_tb_beh.prj work.trueTop_tb work.glbl 
 ISim P.20160913 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 1
 Turning on mult-threading, number of parallel sub-compilation jobs: 0 
 Determining compilation order of HDL files
-Analyzing Verilog file "/home/ise/XIlinxShare/Public-Key Decryption/PublicKeyDecryption/ioControl.v" into library work
-Analyzing Verilog file "/home/ise/XIlinxShare/Public-Key Decryption/PublicKeyDecryption/ioContro_tb.v" into library work
+Analyzing Verilog file "/home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/RNG.v" into library work
+Analyzing Verilog file "/home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/privatekeyGen.v" into library work
+WARNING:HDLCompiler:693 - "/home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/privatekeyGen.v" Line 64: Parameter declaration becomes local in privatekeyGen with formal parameter declaration list
+WARNING:HDLCompiler:693 - "/home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/privatekeyGen.v" Line 66: Parameter declaration becomes local in privatekeyGen with formal parameter declaration list
+WARNING:HDLCompiler:693 - "/home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/privatekeyGen.v" Line 68: Parameter declaration becomes local in privatekeyGen with formal parameter declaration list
+WARNING:HDLCompiler:693 - "/home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/privatekeyGen.v" Line 70: Parameter declaration becomes local in privatekeyGen with formal parameter declaration list
+Analyzing Verilog file "/home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/modExp.v" into library work
+WARNING:HDLCompiler:693 - "/home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/modExp.v" Line 37: Parameter declaration becomes local in modExp with formal parameter declaration list
+WARNING:HDLCompiler:693 - "/home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/modExp.v" Line 38: Parameter declaration becomes local in modExp with formal parameter declaration list
+WARNING:HDLCompiler:693 - "/home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/modExp.v" Line 39: Parameter declaration becomes local in modExp with formal parameter declaration list
+WARNING:HDLCompiler:693 - "/home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/modExp.v" Line 40: Parameter declaration becomes local in modExp with formal parameter declaration list
+WARNING:HDLCompiler:693 - "/home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/modExp.v" Line 41: Parameter declaration becomes local in modExp with formal parameter declaration list
+Analyzing Verilog file "/home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/KeyGen_Top.v" into library work
+Analyzing Verilog file "/home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/trueTop.v" into library work
+Analyzing Verilog file "/home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/trueTop_tb.v" into library work
 Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
+WARNING:HDLCompiler:1016 - "/home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/trueTop.v" Line 51: Port rst is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/trueTop.v" Line 52: Port rst is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/KeyGen_Top.v" Line 26: Port none is not connected to this instance
 Completed static elaboration
-Fuse Memory Usage: 94920 KB
-Fuse CPU Usage: 1000 ms
-Compiling module ioControl
-Compiling module ioContro_tb
+Fuse Memory Usage: 94944 KB
+Fuse CPU Usage: 1350 ms
+Compiling module RNG
+Compiling module privatekeyGen
+Compiling module KeyGen_Top
+Compiling module modExp
+Compiling module trueTop
+Compiling module trueTop_tb
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Compiled 3 Verilog Units
-Built simulation executable /home/ise/XIlinxShare/Public-Key Decryption/PublicKeyDecryption/ioContro_tb_isim_beh.exe
-Fuse Memory Usage: 98020 KB
-Fuse CPU Usage: 1010 ms
-GCC CPU Usage: 190 ms
+Compiled 7 Verilog Units
+Built simulation executable /home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/trueTop_tb_isim_beh.exe
+Fuse Memory Usage: 98136 KB
+Fuse CPU Usage: 1410 ms
+GCC CPU Usage: 520 ms

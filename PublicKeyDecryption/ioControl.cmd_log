@@ -1,1 +1,0 @@
-xst -intstyle ise -ifn "/home/ise/XIlinxShare/Public-Key Decryption/PublicKeyDecryption/ioControl.xst" -ofn "/home/ise/XIlinxShare/Public-Key Decryption/PublicKeyDecryption/ioControl.syr" 

@@ -5,5 +5,41 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/privatekeyGen.v" Line 64: Parameter declaration becomes local in <arg fmt="%s" index="1">privatekeyGen</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/privatekeyGen.v" Line 66: Parameter declaration becomes local in <arg fmt="%s" index="1">privatekeyGen</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/privatekeyGen.v" Line 68: Parameter declaration becomes local in <arg fmt="%s" index="1">privatekeyGen</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/privatekeyGen.v" Line 70: Parameter declaration becomes local in <arg fmt="%s" index="1">privatekeyGen</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/modExp.v" Line 37: Parameter declaration becomes local in <arg fmt="%s" index="1">modExp</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/modExp.v" Line 38: Parameter declaration becomes local in <arg fmt="%s" index="1">modExp</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/modExp.v" Line 39: Parameter declaration becomes local in <arg fmt="%s" index="1">modExp</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/modExp.v" Line 40: Parameter declaration becomes local in <arg fmt="%s" index="1">modExp</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/modExp.v" Line 41: Parameter declaration becomes local in <arg fmt="%s" index="1">modExp</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/trueTop.v" Line 51: Port <arg fmt="%s" index="1">rst</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/trueTop.v" Line 52: Port <arg fmt="%s" index="1">rst</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/ise/VMShare/Public-Key-Decryption/PublicKeyDecryption/KeyGen_Top.v" Line 26: Port <arg fmt="%s" index="1">none</arg> is not connected to this instance
+</msg>
+
 </messages>
 
